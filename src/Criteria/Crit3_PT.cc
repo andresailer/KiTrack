@@ -23,7 +23,7 @@ Crit3_PT::Crit3_PT( float ptMin , float ptMax , float Bz ){
 
 
 
-bool Crit3_PT::areCompatible( Segment* parent , Segment* child )throw( BadSegmentLength ){
+bool Crit3_PT::areCompatible( Segment* parent , Segment* child ){
    
    
    
@@ -70,7 +70,7 @@ bool Crit3_PT::areCompatible( Segment* parent , Segment* child )throw( BadSegmen
 
          
       }
-      catch ( InvalidParameter ){
+      catch ( InvalidParameter& ){
          
          if (_saveValues) _map_name_value["Crit3_PT"] =  0.;
          

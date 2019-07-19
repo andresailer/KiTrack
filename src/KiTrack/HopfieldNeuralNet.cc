@@ -8,7 +8,7 @@
 
 using namespace KiTrack;
 
-HopfieldNeuralNet::HopfieldNeuralNet( std::vector < std::vector <bool> > G , std::vector < double > QI , std::vector < double > states , double omega) throw( InvalidParameter ){
+HopfieldNeuralNet::HopfieldNeuralNet( std::vector < std::vector <bool> > G , std::vector < double > QI , std::vector < double > states , double omega){
 
    unsigned int nNeurons = G.size();
 

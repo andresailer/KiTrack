@@ -24,7 +24,7 @@ Crit4_3DAngleChangeNormed::Crit4_3DAngleChangeNormed ( float changeMin , float c
 
 
 
-bool Crit4_3DAngleChangeNormed::areCompatible( Segment* parent , Segment* child )throw( BadSegmentLength ){
+bool Crit4_3DAngleChangeNormed::areCompatible( Segment* parent , Segment* child ){
    
 
    if (( parent->getHits().size() == 3 )&&( child->getHits().size() == 3 )){ //this is a criterion for 3-segments
@@ -90,7 +90,7 @@ bool Crit4_3DAngleChangeNormed::areCompatible( Segment* parent , Segment* child 
          if ( ratioNormed < _changeMin ) return false;
          
       }
-      catch ( InvalidParameter ){
+      catch ( InvalidParameter& ){
          
          if (_saveValues) _map_name_value["Crit4_3DAngleChangeNormed"] = 0.;
          

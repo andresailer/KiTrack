@@ -25,7 +25,7 @@ Crit4_DistToExtrapolation::Crit4_DistToExtrapolation ( float distMin , float dis
 
 
 
-bool Crit4_DistToExtrapolation::areCompatible( Segment* parent , Segment* child )throw( BadSegmentLength ){
+bool Crit4_DistToExtrapolation::areCompatible( Segment* parent , Segment* child ){
     
    
    
@@ -90,7 +90,7 @@ bool Crit4_DistToExtrapolation::areCompatible( Segment* parent , Segment* child 
          if ( distNormed < _distMin ) return false;
          
       }
-      catch ( InvalidParameter ){
+      catch ( InvalidParameter& ){
          
          if (_saveValues) _map_name_value["Crit4_DistToExtrapolation"] = -1.;
       

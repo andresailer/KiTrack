@@ -23,7 +23,7 @@ Crit3_2DAngleTimesR::Crit3_2DAngleTimesR ( float angleMin, float angleMax ){
 
 
       
-bool Crit3_2DAngleTimesR::areCompatible( Segment* parent , Segment* child )throw( BadSegmentLength ){
+bool Crit3_2DAngleTimesR::areCompatible( Segment* parent , Segment* child ){
    
    
    //this is not written very beautiful, because this code gets called often and needs to be fast.
@@ -102,7 +102,7 @@ bool Crit3_2DAngleTimesR::areCompatible( Segment* parent , Segment* child )throw
             if ( angleTimesR > _angleMax ) return false;
             
          }
-         catch( InvalidParameter ){
+         catch( InvalidParameter& ){
             
             
          }

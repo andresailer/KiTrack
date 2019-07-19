@@ -23,7 +23,7 @@ Crit3_IPCircleDistTimesR::Crit3_IPCircleDistTimesR( float distToCircleMin , floa
 
 
 
-bool Crit3_IPCircleDistTimesR::areCompatible( Segment* parent , Segment* child )throw( BadSegmentLength ){
+bool Crit3_IPCircleDistTimesR::areCompatible( Segment* parent , Segment* child ){
    
 
    
@@ -61,7 +61,7 @@ bool Crit3_IPCircleDistTimesR::areCompatible( Segment* parent , Segment* child )
          if ( circleDistToIPTimesR  < _distToCircleMin ) return false;
          
       }
-      catch ( InvalidParameter ){
+      catch ( InvalidParameter& ){
          
          
          if (_saveValues) _map_name_value["Crit3_IPCircleDistTimesR"] =  0.;

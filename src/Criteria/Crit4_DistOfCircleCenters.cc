@@ -24,7 +24,7 @@ Crit4_DistOfCircleCenters::Crit4_DistOfCircleCenters ( float distMin , float dis
 
 
 
-bool Crit4_DistOfCircleCenters::areCompatible( Segment* parent , Segment* child )throw( BadSegmentLength ){
+bool Crit4_DistOfCircleCenters::areCompatible( Segment* parent , Segment* child ){
     
    
    
@@ -79,7 +79,7 @@ bool Crit4_DistOfCircleCenters::areCompatible( Segment* parent , Segment* child 
          if ( distOfCircleCenters < _distMin ) return false;
       
       }
-      catch ( InvalidParameter ){
+      catch ( InvalidParameter& ){
          
          if (_saveValues) _map_name_value["Crit4_DistOfCircleCenters"] = 0.;
          
